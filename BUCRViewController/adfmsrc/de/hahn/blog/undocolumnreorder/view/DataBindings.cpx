@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.16.48" id="DataBindings"
+             SeparateXMLFiles="false" Package="de.hahn.blog.undocolumnreorder.view" ClientType="Generic">
+  <pageMap>
+    <page path="/index.jsf" usageId="de_hahn_blog_undocolumnreorder_view_indexPageDef"/>
+    <page path="/normalTable.jsf" usageId="de_hahn_blog_undocolumnreorder_view_normalTablePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="de_hahn_blog_undocolumnreorder_view_indexPageDef"
+          path="de.hahn.blog.undocolumnreorder.view.pageDefs.indexPageDef"/>
+    <page id="de_hahn_blog_undocolumnreorder_view_normalTablePageDef"
+          path="de.hahn.blog.undocolumnreorder.view.pageDefs.normalTablePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="BUCRAppModuleDataControl" Package="de.hahn.blog.undocolumnreorder.model.adfbc.services"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="BUCRAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

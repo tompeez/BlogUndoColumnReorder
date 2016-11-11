@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="de.hahn.blog.undocolumnreorder.model.adfbc.services.BUCRAppModule">
+    <AppModuleConfig name="BUCRAppModuleLocal" jbo.project="de.hahn.blog.undocolumnreorder.model.BUCRModel"
+                     ApplicationName="de.hahn.blog.undocolumnreorder.model.adfbc.services.BUCRAppModule"
+                     DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/HRConnDS"/>
+      <Security AppModuleJndiName="de.hahn.blog.undocolumnreorder.model.adfbc.services.BUCRAppModule"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="BUCRAppModuleShared" jbo.project="de.hahn.blog.undocolumnreorder.model.BUCRModel"
+                     ApplicationName="de.hahn.blog.undocolumnreorder.model.adfbc.services.BUCRAppModule"
+                     DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/HRConnDS"/>
+      <Security AppModuleJndiName="de.hahn.blog.undocolumnreorder.model.adfbc.services.BUCRAppModule"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>
